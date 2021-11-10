@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Navbar.module.scss";
 
 const navigation = [
@@ -14,7 +15,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        webDev
+        <Image src='/logo.svg.png' width={100} height={30} alt='nike' />
       </div>
       <div className={styles.links}>
         {navigation.map(({ id, title, path }) => (
