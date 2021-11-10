@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import { Heading } from "../../components/Heading";
 
@@ -27,7 +28,9 @@ const Contacts = ({ contacts }) => {
       <Heading text='Contacts list:' />
       <ul>
         {contacts && contacts.map(({ id, name, email }) => (
-          <li key={id}><strong>{name}</strong> ({email})</li>
+          <li key={id}>
+            <Link href={`/contacts/${id}`}>{name}</Link>
+          </li>
         ))}
       </ul>
     </>
