@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { Heading } from "./Heading";
 
-export const Footer = () => (
+export const Footer:FC = () => (
   <footer>
     <Heading tag="h3" text="Footer" />
   </footer>
