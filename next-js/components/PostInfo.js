@@ -1,6 +1,6 @@
-import Heading from "./Heading";
+import { Heading } from "./Heading";
 
-const PostInfo = ({ post }) => {
+export const PostInfo = ({ post }) => {
   const { title, body } = post || {};
 
   if (!post) {
@@ -13,6 +13,4 @@ const PostInfo = ({ post }) => {
       <p>{body}</p>
     </>
   );
-}
-
-export default PostInfo;
+};

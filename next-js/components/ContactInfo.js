@@ -1,16 +1,16 @@
 import { Heading } from "./Heading";
 
 export const ContactInfo = ({ contact }) => {
-  const { name,email, address } = contact || {};
+  const { name, email, address } = contact || {};
   const { street, suite, city, zipcode } = address || {};
 
   if (!contact) {
-    return <Heading tag='h3' text='Empty contact' />
+    return <Heading tag="h3" text="Empty contact" />
   }
 
   return (
     <>
-      <Heading tag='h3' text={name} />
+      <Heading tag="h3" text={name} />
       <div>
         <strong>Email: </strong>
         {email}
@@ -20,5 +20,5 @@ export const ContactInfo = ({ contact }) => {
         {`${street}, ${suite}, ${city}, ${zipcode}`}
       </div>
     </>
-  )
+  );
 };
