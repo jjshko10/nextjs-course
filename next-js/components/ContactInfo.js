@@ -2,7 +2,7 @@ import { Heading } from "./Heading";
 
 export const ContactInfo = ({ contact }) => {
   const { name,email, address } = contact || {};
-  const { streer, suite, city, zipcode } = address || {};
+  const { street, suite, city, zipcode } = address || {};
 
   if (!contact) {
     return <Heading tag='h3' text='Empty contact' />
